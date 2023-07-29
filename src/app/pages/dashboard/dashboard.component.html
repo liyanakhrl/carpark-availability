@@ -1,0 +1,30 @@
+ 
+<!-- carpark-list.component.html -->
+<div class="container">
+  <h2>Highest and Lowest Available Lots</h2>
+  <div class="carpark-categories">
+    <ng-container *ngFor="let category of ['small', 'medium', 'big', 'large']">
+      <div class="carpark-category" *ngIf="getCarParksByCategory(category).length > 0; else noCarparks">
+        <h4>{{ category | uppercase }}</h4>
+        <div class="highest">
+          <p>HIGHEST ({{ highestAvailableLots(category).totalLots }} lots available)</p>
+          <span *ngFor="let carpark of highestAvailableLots(category).carparks">
+            {{ carpark.carpark_number }}<span *ngIf="!isLast(carpark, highestAvailableLots(category).carparks)">,</span>
+          </span>
+        </div>       
+     
+        <div class="lowest">
+          <p>LOWEST ({{ lowestAvailableLots(category).totalLots }} lots available)</p>
+          <span *ngFor="let carpark of lowestAvailableLots(category).carparks">
+            {{ carpark.carpark_number }}<span *ngIf="!isLast(carpark, lowestAvailableLots(category).carparks)">,</span>
+          </span>
+         
+        </div> 
+      </div>
+    </ng-container>
+  </div>
+
+  <ng-template #noCarparks>
+    <p class="no-carparks">No car parks available for this category.</p>
+  </ng-template>
+</div>

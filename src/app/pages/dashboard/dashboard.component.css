@@ -1,0 +1,97 @@
+ 
+*{  
+  font-family: 'Roboto', sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 97%; 
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin: 0 auto; 
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.carpark-categories {
+  display: flex;
+  flex-wrap: wrap;justify-content: space-evenly
+}
+
+.carpark-category { 
+  margin:20px;
+  flex: 3 0 calc(45% - 20px); 
+  background-color: #fff; 
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Make .carpark-category a column */
+}
+
+.carpark-category h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+  background: cornsilk;
+  padding: 10px;
+  text-align: center;
+}
+
+.highest,
+.lowest {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #777;
+  width: 100%;
+}
+
+.highest span,
+.lowest span {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #333;
+}
+
+.highest p,
+.lowest p {
+  font-size: 16px;
+  margin-right: 5px;
+  font-weight: 100;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.highest strong,
+.lowest strong {
+  font-size: 20px;
+  color: #4caf50;
+}
+
+.no-carparks {
+  font-size: 18px;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  .carpark-category {
+    flex: 0 0 calc(100% - 20px);
+  }
+}

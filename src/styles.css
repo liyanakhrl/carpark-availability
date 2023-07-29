@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+:root { 
+    --default-button: #007BFF;
+    --success-button: #28A745;
+    --info-button: #17A2B8;
+    --warning-button: #FFC107;
+    --danger-button: #FF6961;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('.././src/assets/fonts/Roboto-Regular.ttf') format('truetype');
+    /* Add additional @font-face rules for different font weights and styles if needed */
+  }
+  
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+  
