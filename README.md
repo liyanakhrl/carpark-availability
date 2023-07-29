@@ -1,4 +1,4 @@
-# Car Availability Dashboard
+# Carpark Availability Dashboard
 
 ## How to run the project
 ```
